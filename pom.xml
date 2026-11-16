@@ -21,7 +21,7 @@
 
     <properties>
         <java.version>21</java.version>
-        <agenor.version>0.35.0</agenor.version>
+        <agenor.version>0.39.0</agenor.version>
     </properties>
 
     <dependencies>
