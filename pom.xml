@@ -24,19 +24,30 @@
         <agenor.version>0.41.0</agenor.version>
     </properties>
 
+    <!-- Agenor BOM — aligns the versions of all dev.agenor modules, transitive ones included -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>dev.agenor</groupId>
+                <artifactId>agenor-bom</artifactId>
+                <version>${agenor.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <!-- Agenor Spring Boot Starter — one dependency is all you need -->
         <dependency>
             <groupId>dev.agenor</groupId>
             <artifactId>agenor-spring-boot-starter</artifactId>
-            <version>${agenor.version}</version>
         </dependency>
 
         <!-- Required at runtime for @Agent/@Behavior classpath scanning -->
         <dependency>
             <groupId>dev.agenor</groupId>
             <artifactId>agenor-runtime-scanning</artifactId>
-            <version>${agenor.version}</version>
         </dependency>
 
         <!--
@@ -46,7 +57,6 @@
         <dependency>
             <groupId>dev.agenor</groupId>
             <artifactId>agenor-adapters</artifactId>
-            <version>${agenor.version}</version>
         </dependency>
         -->
 
