@@ -21,7 +21,7 @@
 
     <properties>
         <java.version>21</java.version>
-        <agenor.version>0.24.0</agenor.version>
+        <agenor.version>0.35.0</agenor.version>
     </properties>
 
     <dependencies>
@@ -29,6 +29,13 @@
         <dependency>
             <groupId>dev.agenor</groupId>
             <artifactId>agenor-spring-boot-starter</artifactId>
+            <version>${agenor.version}</version>
+        </dependency>
+
+        <!-- Required at runtime for @Agent/@Behavior classpath scanning -->
+        <dependency>
+            <groupId>dev.agenor</groupId>
+            <artifactId>agenor-runtime-scanning</artifactId>
             <version>${agenor.version}</version>
         </dependency>
 

@@ -7,13 +7,8 @@ Minimal standalone Spring Boot 4.0.x application demonstrating
 
 - Java 21+
 - Maven 3.9+
-- Agenor installed locally (until published to Maven Central):
 
-```bash
-git clone --branch v0.24.0 https://github.com/mauro-mura/agenor.git
-cd agenor
-mvn install -DskipTests
-```
+Agenor is published on Maven Central, so no local build is required.
 
 ## Run
 
@@ -40,7 +35,10 @@ INFO  ClockAgent              - [ClockAgent] tick — 10:00:05
 | `GreeterAgent` | true | `ONE_SHOT` + message handler | Greets on startup; handles messages on `greet.topic` |
 | `LlmGreeterAgent` | **false** | `ONE_SHOT` | Dormant at startup; activated on demand via REST |
 
-Zero `@Configuration` classes. Zero manual bean wiring. One dependency.
+Zero `@Configuration` classes. Zero manual bean wiring.
+
+`agenor-runtime-scanning` is required alongside `agenor-spring-boot-starter`
+for `@Agent`/`@Behavior` classpath scanning to discover the agents above.
 
 ## Check health
 
