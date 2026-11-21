@@ -1,5 +1,13 @@
 # agenor-example-spring-boot
 
+> **Archived.** This example was last updated for Agenor 0.41.0 and is no longer maintained.
+> For a Spring Boot application built on Agenor, with agents on two nodes over Redis and a person
+> approving what an LLM agent drafts, see
+> [agenor-example-helpdesk](https://github.com/mauro-mura/agenor-example-helpdesk).
+> What this example shows is documented in Agenor itself: discovery by package scanning and a start
+> with no infrastructure in the [Spring Boot Starter guide](https://www.agenor.dev/docs/spring-boot-starter/),
+> and `@Agent(autoStart = false)` in the annotation's Javadoc.
+
 Minimal standalone Spring Boot 4.0.x application demonstrating
 [agenor-spring-boot-starter](https://github.com/mauro-mura/agenor) zero-boilerplate integration.
 
